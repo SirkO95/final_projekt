@@ -1,63 +1,37 @@
-1️⃣ Вступ
+# Film Search App
 
-Название проекта: “FilmSearchApp” – поиск фильмов из базы Sakila с логированием запросов в MongoDB.
+A desktop application for searching movies from the Sakila database with search query logging in MongoDB.
 
-Идея: помочь пользователям быстро находить фильмы по ключевым словам или по жанрам и годам, а также видеть топ-запросы других пользователей.
+## Features
 
-Стек: Python, Tkinter (GUI), MySQL (Sakila), MongoDB (логирование запросов).
+- Search movies by keyword
+- Search movies by genre and year range
+- View Top-5 most popular search queries
+- Logging of all user searches into MongoDB
 
-"Моя программа позволяет искать фильмы по названию или жанру с ограничением по годам и отслеживает популярные поисковые запросы."
+## Tech Stack
 
-2️⃣ Основной функционал
+- **Python**
+- **Tkinter** (GUI)
+- **MySQL** (Sakila sample database)
+- **MongoDB** (search query logging)
 
-Поиск по ключевому слову
+## Project Structure
 
-Поиск по жанру и годам
+```text
+main.py              # Main application entry point
+mysql_connector.py   # MySQL database connection and queries
+log_writer.py        # MongoDB logging
+formatter.py         # Data formatting helpers
+requirements.txt     # Dependencies
 
-Топ-5 популярных запросов
-
-3️⃣ Демонстрация программы
-
-3.1 Поиск по ключевому слову
-
-Вводим "Matrix" → таблица с названием, годом, жанрами и рейтингом.
-
-3.2 Поиск по жанру и годам
-
-Жанр "Action" и годы 1990–2025 → отображение фильмов соответствующего жанра и года.
-
-3.3 Топ-5 запросов
-
-Кнопка → таблица с последними или самыми популярными поисковыми запросами пользователей.
-
-4️⃣ Коротко об архитектуре
-
-Tkinter GUI – оконный интерфейс
-
-MySQL (Sakila) – данные о фильмах
-
-MongoDB – логирование запросов пользователей
-
-Код модульный: main.py, mysql_connector.py, log_writer.py, formatter.py, config.py
-
-"Архитектура проста и модульная: MySQL для данных о фильмах, MongoDB для логов, GUI через Tkinter. Каждый модуль отвечает за свою функцию."
-
-5️⃣ Заключение / ответы на вопросы
-
-Легко добавить новые фильтры (актер, рейтинг и т.д.)
-
-Программа масштабируемая: можно подключить другую базу или добавить статистику
-
-Короткая усная презентация (5 минут)
-
-"Добрый день, я представляю проект FilmSearchApp. Это программа для поиска фильмов в базе Sakila с логированием запросов в MongoDB. Пользователь может искать фильмы по ключевому слову или по жанру и годам, а также просматривать топ-5 популярных запросов.
-
-Демонстрирую поиск по ключевому слову: вводим 'Matrix' → получаем таблицу с названиями фильмов, годами, жанрами и рейтингом.
-
-Теперь демонстрация поиска по жанру и годам: выбираем жанр 'Action' и годы от 1990 до 2025 → отображаются соответствующие фильмы.
-
-Нажимаем кнопку 'Топ-5 запросов' → таблица показывает последние или самые популярные поисковые запросы пользователей.
-
-Архитектура проекта проста: Tkinter отвечает за GUI, MySQL хранит данные о фильмах, MongoDB – логи запросов. Код модульный, каждый файл отвечает за свою функцию.
-
-Программа легко масштабируется: можно добавлять новые фильтры, другие базы данных, статистику. Спасибо за внимание, готов ответить на вопросы."
+How to Run
+Clone the repository:
+Bashgit clone https://github.com/SirkO95/final_projekt.git
+cd final_projekt
+Install dependencies:
+Bashpip install -r requirements.txt
+Make sure MySQL (Sakila) and MongoDB are running.
+Start the application:
+Bashpython main.py
+Author Oleksandr Zakharchuktext
